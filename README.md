@@ -1,7 +1,7 @@
 # Elk: Exploring the Efficiency of Inter-core Connected AI Chips with Deep Learning Compiler Techniques (Artifact)
 
 ## 1 Abstract
-This is the artifact of the [ELK Project](https://arxiv.org/abs/2507.11506), which is accepted at [MICRO'2025](https://microarch.org/micro58/).
+This is the artifact of the [Elk paper](https://arxiv.org/abs/2507.11506), which is accepted at [MICRO'2025](https://microarch.org/micro58/).
 In this artifact, we provide the source code of Elk's compilation, simulation, and evaluation framework. Then, we guide readers to explore how Elk improves the model serving performance on a variety of ICCA chips (i.e., Figure 17–24 in [our paper](https://arxiv.org/abs/2507.11506)). To run this artifact, please use a Linux machine with at least 200 GB of main memory and at least 100 GB of disk space.
 
 ## 2 Artifact Checklist
