@@ -39,7 +39,7 @@ The framework needs a Linux environment (preferably Ubuntu) with Python 3.10 ins
    ```
 
 ## 5. Experiment Workflow
-To compile DL models into programs and obtain program execution traces from the Elk simulator, we provide a one-click script `benchmark_scripts/generate_data_from_sim.py` for you to launch all test cases in one place. However, the script may take more than 80 hours to finish, so we recommend using `tmux`:
+To compile DL models into programs and obtain program execution traces from the Elk simulator, we provide a one-click script `benchmark_scripts/generate_data_from_sim.py` for you to launch all test cases in one place. However, the script may take more than 30 hours to finish, so we recommend using `tmux`:
 ```bash
 tmux
 ```
