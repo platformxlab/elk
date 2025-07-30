@@ -2,7 +2,7 @@
 
 ## 1. Abstract
 This is the artifact of the [Elk paper](https://arxiv.org/abs/2507.11506), which is accepted at [MICRO'2025](https://microarch.org/micro58/).
-In this artifact, we provide the source code of Elk's compilation, simulation, and evaluation framework. Then, we guide readers to explore how Elk improves the model serving performance on a variety of ICCA chips (i.e., Figure 17–24 in [our paper](https://arxiv.org/abs/2507.11506)). To run this artifact, please use a Linux machine with at least 200 GB of main memory and at least 100 GB of disk space.
+In this artifact, we provide the source code of Elk's compilation, simulation, and evaluation framework. Then, we guide readers to explore how Elk improves the model serving performance on a variety of ICCA chips (i.e., Figure 17–24 in [our paper](https://arxiv.org/abs/2507.11506)). To run this artifact, please use a Linux machine with at least 200 GB of main memory and at least 20 GB of disk space.
 
 ## 2. Artifact Checklist
 - **Algorithm**: Inductive tensor operator scheduling, cost-aware on-chip memory allocation, and ICCA chip design space exploration.
@@ -12,14 +12,14 @@ In this artifact, we provide the source code of Elk's compilation, simulation, a
 - **Output**: Trace files and result figures.
 - **Experiments**: Generate experiments using supplied scripts.
 - **How much main memory required (approximately)**: 200 GB
-- **How much disk space required (approximately)**: 100 GB
+- **How much disk space required (approximately)**: 20 GB
 - **How much time to prepare workflow (approximately)**: 10 minutes
-- **How much time to complete experiments (approximately)**: 50 hours on a machine with 64 CPU threads and 200 GB main memory.
+- **How much time to complete experiments (approximately)**: 30 hours on a machine with 64 CPU threads and 200 GB main memory.
 
 ## 3. Description
 
 ### 3.1 Hardware Dependencies
-The Elk simulation and evaluation framework can run on any x86 machine with at least 200 GB of main memory and at least 100 GB of disk space.
+The Elk simulation and evaluation framework can run on any x86 machine with at least 200 GB of main memory and at least 20 GB of disk space.
 
 ### 3.2 Software Dependencies
 The framework needs a Linux environment (preferably Ubuntu) with Python 3.10 installed.
