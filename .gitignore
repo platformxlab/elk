@@ -1,0 +1,37 @@
+# Ignore all
+*
+# Unignore all with extensions
+!*.*
+# Unignore all dirs
+!*/
+# Above combination will ignore all files without extension
+
+*/poplar_debug_exception_mem_*
+*.tar
+*archive.a
+*report*
+*core.*
+*.so
+__pycache__*
+*.json
+draft
+*.log
+*.gz
+*.pickle
+poplar_sdk-ubuntu_20_04-3.4.0+1507-69d9d03fd8/*
+*~
+#*
+
+benchmark_scripts/outputs/*
+*.pdf
+*.png
+
+# Unignore models
+!/models/original/*
+
+/models/parsed/*
+/models/TExpr/*
+
+reg_*.pkl
+.vscode/*
+benchmark_scripts/outputs/*
