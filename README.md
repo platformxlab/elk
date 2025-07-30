@@ -47,17 +47,14 @@ Then, run the one-click script within the new tmux terminal:
 ```bash
 python3 benchmark_scripts/generate_data_from_sim.py
 ```
-To return from the pop-up terminal without pausing the script, press `Ctrl+B` and then press `D` on your keyboard. To attach back to the original tmux terminal where the script is running, use:
+To return from the tmux terminal without pausing the script, press `Ctrl+B` and then press `D` on your keyboard. To attach back to the original tmux terminal where the script is running, use:
 ```bash
 tmux attach -t 0
 ```
 For more tips on using tmux, refer to [https://tmuxcheatsheet.com](https://tmuxcheatsheet.com).
 
 ### 5.1 Handle Errors
-If the script encounters an error, the most common cause is that the artifact runs on too many CPU cores and overflows the main memory. In such events, go to `icbm_launch.py`, change the `CORE_REDUCE` macro in line 22 to a larger value (e.g., 8). Finally, attach back to the original tmux terminal and run again:
-```bash
-tmux attach -t 0
-```
+If the script encounters an error, the most common cause is that the artifact runs on too many CPU cores and overflows the main memory. In such events, (1) go to `icbm_launch.py`, (2) change the `CORE_REDUCE` macro in line 22 to a larger value (e.g., `CORE_REDUCE=8`), and (3) rerun the script:
 ```bash
 python3 benchmark_scripts/generate_data_from_sim.py
 ```
