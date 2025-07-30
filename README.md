@@ -57,6 +57,8 @@ For more tips on using tmux, refer to [https://tmuxcheatsheet.com](https://tmuxc
 If the script encounters an error, the most common cause is that the artifact runs on too many CPU cores and overflows the main memory. In such events, go to `icbm_launch.py`, change the `CORE_REDUCE` macro in line 22 to a larger value (e.g., 8). Finally, attach back to the original tmux terminal and run again:
 ```bash
 tmux attach -t 0
+```
+```bash
 python3 benchmark_scripts/generate_data_from_sim.py
 ```
 The script should automatically skip any completed test cases and resume from the failed one.
