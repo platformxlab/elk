@@ -1,10 +1,10 @@
 # Elk: Exploring the Efficiency of Inter-core Connected AI Chips with Deep Learning Compiler Techniques (Artifact)
 
-## 1 Abstract
+## 1. Abstract
 This is the artifact of the [Elk paper](https://arxiv.org/abs/2507.11506), which is accepted at [MICRO'2025](https://microarch.org/micro58/).
 In this artifact, we provide the source code of Elk's compilation, simulation, and evaluation framework. Then, we guide readers to explore how Elk improves the model serving performance on a variety of ICCA chips (i.e., Figure 17–24 in [our paper](https://arxiv.org/abs/2507.11506)). To run this artifact, please use a Linux machine with at least 200 GB of main memory and at least 100 GB of disk space.
 
-## 2 Artifact Checklist
+## 2. Artifact Checklist
 - **Algorithm**: Inductive tensor operator scheduling, cost-aware on-chip memory allocation, and ICCA chip design space exploration.
 - **Neural Network Models**: Llama2-13B, Gemma2-27B, OPT-30B, Llama2-70B, and DIT-XL. Their execution graphs are included in the repo.
 - **Run-time environment**: Ubuntu 20.04 or newer, Python 3.10.
@@ -16,7 +16,7 @@ In this artifact, we provide the source code of Elk's compilation, simulation, a
 - **How much time to prepare workflow (approximately)**: 10 minutes
 - **How much time to complete experiments (approximately)**: 50 hours on a machine with 64 CPU threads and 200 GB main memory.
 
-## 3 Description
+## 3. Description
 
 ### 3.1 Hardware Dependencies
 The Elk simulation and evaluation framework can run on any x86 machine with at least 200 GB of main memory and at least 100 GB of disk space.
@@ -24,7 +24,7 @@ The Elk simulation and evaluation framework can run on any x86 machine with at l
 ### 3.2 Software Dependencies
 The framework needs a Linux environment (preferably Ubuntu) with Python 3.10 installed.
 
-## 4 Installation
+## 4. Installation
 1. Start by downloading the Elk artifact from GitHub:
    ```bash
    git clone https://github.com/platformxlab/elk.git
@@ -38,7 +38,7 @@ The framework needs a Linux environment (preferably Ubuntu) with Python 3.10 ins
    pip3 install -r requirements.txt
    ```
 
-## 5 Experiment Workflow
+## 5. Experiment Workflow
 To compile DL models into programs and obtain program execution traces from the Elk simulator, we provide a one-click script `benchmark_scripts/generate_data_from_sim.py` for you to launch all test cases in one place. However, the script may take more than 80 hours to finish, so we recommend using `tmux`:
 ```bash
 tmux
@@ -61,7 +61,7 @@ python3 benchmark_scripts/generate_data_from_sim.py
 ```
 The script should automatically skip any completed test cases and resume from the failed one.
 
-## 6 Evaluation and Expected Results
+## 6. Evaluation and Expected Results
 After the completion of all experiments, please run the following script to evaluate the results:
 ```bash
 ./run_artifact_eval_graph_gen.sh
