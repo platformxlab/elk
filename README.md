@@ -14,7 +14,7 @@ In this artifact, we provide the source code of Elk's compilation, simulation, a
 - **How much main memory required (approximately)**: 200 GB
 - **How much disk space required (approximately)**: 20 GB
 - **How much time to prepare workflow (approximately)**: 10 minutes
-- **How much time to complete experiments (approximately)**: 30 hours on a machine with 64 CPU threads and 200 GB main memory.
+- **How much time to complete experiments (approximately)**: 30 hours on a machine with 64 CPU cores and 200 GB main memory.
 
 ## 3. Description
 
