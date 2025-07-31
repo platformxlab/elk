@@ -8,12 +8,12 @@ from concurrent.futures import ProcessPoolExecutor as Pool
 import numpy as np
 from copy import deepcopy
 
-from icbm_DNNModels import get_model_from_file, \
+from DNNModels import get_model_from_file, \
     search_optimal_exe_load_config_order_independent_helper, \
     search_optimal_exe_load_config_baseline_independent_helper
-import icbm_DNNProgram
+import DNNProgram
 
-import t10_TensorExpression as TE
+import TensorExpression as TE
 
 from benchmark_scripts.fig_common import IPU_Mk2_cycle_to_ms
 
@@ -97,11 +97,11 @@ if __name__ == "__main__":
     parser.add_argument("--training", action='store_true', required=False, default=False)
     args = parser.parse_args()
 
-    icbm_DNNProgram.MESH = args.mesh
-    icbm_DNNProgram.COMM = args.comm
-    icbm_DNNProgram.COMP = args.comp
+    DNNProgram.MESH = args.mesh
+    DNNProgram.COMM = args.comm
+    DNNProgram.COMP = args.comp
     TRAINING = args.training
-    icbm_DNNProgram.TRAINING = TRAINING
+    DNNProgram.TRAINING = TRAINING
     if TRAINING:
         MAX_EDIT_DIST = 3
 
@@ -137,7 +137,7 @@ if __name__ == "__main__":
         load = False
         try:
             with open(pickle_filename, 'rb') as f:
-                prog:icbm_DNNProgram.DNNProgram = pickle.load(f)
+                prog:DNNProgram.DNNProgram = pickle.load(f)
                 load = True
         except:
             print("Error loading pickle file", file=sys.stderr)
@@ -396,7 +396,7 @@ if __name__ == "__main__":
     
     start = time.perf_counter()
 
-    if icbm_DNNProgram.MESH < 0.5:
+    if DNNProgram.MESH < 0.5:
         icbm_ordered_exe_list_1, icbm_ordered_load_list_1, icbm_ordered_cold_hot_list_1, icbm_ordered_comp_shift_list_1, \
             icbm_ordered_num_overlap_load_1, icbm_ordered_load_remain_noc_list_1 = prog.search_optimal_exe_load_config_all(args.hbm_bw, layer, delay_comp=True, load_noc_threshold=0.9)
 

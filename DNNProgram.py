@@ -10,9 +10,9 @@ import os, sys
 import time
 import math
 
-import t10_TensorExpression as TE
-from t10_TensorExpression import TensorExpression
-from t10_OpPartitionSearch import build_spatial_search_tree
+import TensorExpression as TE
+from TensorExpression import TensorExpression
+from OpPartitionSearch import build_spatial_search_tree
 
 from fast_perms import edit_dist_permutations, reduced_edit_dist_permutations
 

@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 import argparse
-import icbm_DNNProgram as DNNProgram
+import DNNProgram as DNNProgram
 import pickle
 
 
@@ -117,7 +117,7 @@ for m, model in enumerate(models):
             count=0
             for comp_bw in comp_bws:
                 count+=1
-                mesh_val = float(800/hbm_bw*noc_bw)
+                mesh_val = float(700/hbm_bw*noc_bw)
                 mesh_val = mesh_val**0.5
                 output_file = f"benchmark_scripts/outputs/{model}/test-bw-{batch_size}-{seq_length}-{hbm_bw}-{num_cores}-{kb}-{mesh_val}-{noc_bw}-{comp_bw}-training"
                 with open(output_file, "r") as f:

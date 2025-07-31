@@ -8,7 +8,7 @@ from matplotlib.ticker import FixedLocator
 import numpy as np
 
 import pickle
-from icbm_DNNProgram import DNNProgram
+from DNNProgram import DNNProgram
 from overlap_calc import get_breakdown_stats, get_breakdown_stats_simple, get_breakdown_stats_percentage
 
 

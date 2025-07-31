@@ -4,9 +4,9 @@ from typing import Any, Dict, List, Optional, Tuple
 import pickle
 import time
 
-from icbm_DNNProgram import DNNProgram, TensorOperator
+from DNNProgram import DNNProgram, TensorOperator
 
-import t10_TensorExpression as TE
+import TensorExpression as TE
 
 def get_model_from_file(filename: str,
                         num_cores: List[int] = [1472],

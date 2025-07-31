@@ -6,7 +6,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)) + "/..")
 out_location = ""
 
 import pickle
-from icbm_DNNProgram import DNNProgram
+from DNNProgram import DNNProgram
 
 def IPU_Mk2_cycle_to_ms(cycles):
     return cycles / 1.325e6

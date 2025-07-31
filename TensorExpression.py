@@ -6,9 +6,9 @@ from textwrap import indent
 from typing import Any, Dict, List, Optional, Tuple, Union
 import numpy as np
 from multiprocessing import Pool
-import t10_predictor
+import predictor
 
-from t10_OpPartitionSearch import OpSpatialPartitionSearch, OpTemporalPartitionSearch, build_spatial_search_tree
+from OpPartitionSearch import OpSpatialPartitionSearch, OpTemporalPartitionSearch, build_spatial_search_tree
 
 ICBM_OVERLAP = False
 
@@ -158,8 +158,8 @@ class TensorExpression:
     spatial_var_shapes:List[np.ndarray]     # replace indexes in variables with lengths
     spatial_var_replicas:List[int]          # [num replicas per var]
 
-    pool_predictor = t10_predictor.pool()
-    conv_predictor = t10_predictor.conv()
+    pool_predictor = predictor.pool()
+    conv_predictor = predictor.conv()
     ignore_variables:np.ndarray
 
     is_modified_in_grouping:bool = False
