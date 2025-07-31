@@ -54,7 +54,7 @@ tmux attach -t 0
 For more tips on using tmux, refer to [https://tmuxcheatsheet.com](https://tmuxcheatsheet.com).
 
 ### 5.1 Handle Errors
-If the script encounters an error, the most common cause is that the artifact runs on too many CPU cores and overflows the main memory. In such events, (1) go to `icbm_launch.py`, (2) change the `CORE_REDUCE` macro in line 22 to a larger value (e.g., `CORE_REDUCE=8`), and (3) rerun the script:
+If the script encounters an error, the most common cause is that the artifact runs on too many CPU cores and overflows the main memory. In such events, (1) go to `launch.py`, (2) change the `CORE_REDUCE` macro in line 22 to a larger value (e.g., `CORE_REDUCE=8`), and (3) rerun the script:
 ```bash
 python3 benchmark_scripts/generate_data_from_sim.py
 ```
