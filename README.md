@@ -28,14 +28,16 @@ The framework needs a Linux environment (preferably Ubuntu) with Python 3.10 ins
 1. Start by downloading the Elk artifact from GitHub:
    ```bash
    git clone https://github.com/platformxlab/elk.git
+   cd elk
    ```
 
 2. Please make sure all prerequisites are successfully installed:
    ```bash
+   sudo add-apt-repository ppa:deadsnakes/ppa
    sudo apt update
-   sudo apt install python3 python3-pip tmux
-   cd elk
-   pip3 install -r requirements.txt
+   sudo apt install python3.10 tmux -y
+   curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10
+   python3.10 -m pip install -r requirements.txt
    ```
 
 ## 5. Experiment Workflow
@@ -45,7 +47,7 @@ tmux
 ```
 Then, run the one-click script within the new tmux terminal:
 ```bash
-python3 benchmark_scripts/generate_data_from_sim.py
+python3.10 benchmark_scripts/generate_data_from_sim.py
 ```
 To return from the tmux terminal without pausing the script, press `Ctrl+B` and then press `D` on your keyboard. To attach back to the original tmux terminal where the script is running, use:
 ```bash
@@ -56,7 +58,7 @@ For more tips on using tmux, refer to [https://tmuxcheatsheet.com](https://tmuxc
 ### 5.1 Handle Errors
 If the script encounters an error, the most common cause is that the artifact runs on too many CPU cores and overflows the main memory. In such events, (1) go to `launch.py`, (2) change the `CORE_REDUCE` macro in line 22 to a larger value (e.g., `CORE_REDUCE=8`), and (3) rerun the script:
 ```bash
-python3 benchmark_scripts/generate_data_from_sim.py
+python3.10 benchmark_scripts/generate_data_from_sim.py
 ```
 The script should automatically skip any completed test cases and resume from the failed one.
 
