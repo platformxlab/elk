@@ -169,7 +169,7 @@ if __name__=='__main__':
 
     # fig.text(0.5375, 0.04, 'HBM BW (TB/s)', ha='center', fontsize=25)
 
-    description = f"noc_util-{num_cores}cores-{kb}kb-b{batch_size}-{seq_length}seq"
+    description = f"fig21-noc_util-{num_cores}cores-{kb}kb-b{batch_size}-{seq_length}seq"
     # plt.title(description)
     plt.savefig(f"{description}.png", pad_inches=0)
     plt.savefig(f"{description}.pdf", pad_inches=0)

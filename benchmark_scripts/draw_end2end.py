@@ -208,7 +208,7 @@ if __name__=='__main__':
     ax.grid(which="minor", axis="y", linestyle="-", linewidth=0.5, color="lightgrey", zorder=1)
 
     plt.subplots_adjust(top=0.95, bottom=0.335, left=0.075, right=0.98)
-    description = f"end2end-{num_cores}cores-{kb}kb"
+    description = f"fig17-end2end-{num_cores}cores-{kb}kb"
     # plt.title(description)
     plt.savefig(f"{description}.pdf", pad_inches=0)
     plt.savefig(f"{description}.png", pad_inches=0)

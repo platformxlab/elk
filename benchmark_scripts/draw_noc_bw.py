@@ -142,6 +142,6 @@ if __name__=='__main__':
     # plt.legend(loc="upper right")
     description = f"{num_cores}cores-{kb}kb-b{batch_size}-{seq_length}seq"
     # plt.title(description)
-    plt.savefig(f"noc-bw-{description}.png")
-    plt.savefig(f"noc-bw-{description}.pdf")
+    plt.savefig(f"fig22-noc-bw-{description}.png")
+    plt.savefig(f"fig22-noc-bw-{description}.pdf")
     # plt.savefig("pretty.png", pad_inches=0)

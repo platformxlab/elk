@@ -203,7 +203,7 @@ if __name__=='__main__':
 
         plt.subplots_adjust(top=1, bottom=0.335, left=0.08, right=1)
         grouping = "bw_grouped" if GROUP_BY_BW else "impl_grouped"
-        description = f"breakdown-{grouping}-{model}-{num_cores}cores-{kb}kb-b{batch_size}-{seq_length}seq"
+        description = f"fig20-breakdown-{grouping}-{model}-{num_cores}cores-{kb}kb-b{batch_size}-{seq_length}seq"
         # plt.title(description)
         plt.savefig(f"{description}.pdf", pad_inches=0)
         plt.savefig(f"{description}.png", pad_inches=0)

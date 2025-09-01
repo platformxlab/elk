@@ -219,6 +219,6 @@ if __name__=='__main__':
 
     description = f"{kb}kb-b{batch_size}-{seq_length}seq"
     # plt.legend(loc="upper right")
-    plt.savefig(f"corelines-{description}.png")
-    plt.savefig(f"corelines-{description}.pdf")
+    plt.savefig(f"fig23-corelines-{description}.png")
+    plt.savefig(f"fig23-corelines-{description}.pdf")
     # plt.savefig("draw-core-lines.png", pad_inches=0)

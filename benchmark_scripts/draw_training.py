@@ -235,11 +235,11 @@ if __name__=='__main__':
         description = f"{num_cores}cores-{kb}kb-b{batch_size}-{seq_length}seq"
         # plt.title(description)
         if mesh:
-            plt.savefig(f"train-mesh-{description}.png")
-            plt.savefig(f"train-mesh-{description}.pdf")
+            plt.savefig(f"fig24-train-mesh-{description}.png")
+            plt.savefig(f"fig24-train-mesh-{description}.pdf")
         else:
-            plt.savefig(f"train-all-{description}.png")
-            plt.savefig(f"train-all-{description}.pdf")
+            plt.savefig(f"fig24-train-all-{description}.png")
+            plt.savefig(f"fig24-train-all-{description}.pdf")
         # plt.savefig("pretty.png", pad_inches=0)
 
     draw_one(mesh=False)

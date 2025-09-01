@@ -143,8 +143,8 @@ def draw_breakdown():
     ax.set_axisbelow(True)
     ax.grid(which="major", axis="y", linestyle="-", linewidth=0.5, color="lightgrey", zorder=1)
 
-    plt.savefig("multi-fig-breakdown.png")
-    plt.savefig("multi-fig-breakdown.pdf")
+    plt.savefig("fig18-multi-fig-breakdown.png")
+    plt.savefig("fig18-multi-fig-breakdown.pdf")
 
 
 def draw_mesh():
@@ -272,8 +272,8 @@ def draw_mesh():
         ax.set_axisbelow(True)
         ax.grid(which="major", axis="y", linestyle="-", linewidth=0.5, color="lightgrey", zorder=1)
 
-        plt.savefig(f"multi-fig-mesh-{num_cores}-{mesh}.png")
-        plt.savefig(f"multi-fig-mesh-{num_cores}-{mesh}.pdf")
+        plt.savefig(f"fig18-multi-fig-mesh-{num_cores}-{mesh}.png")
+        plt.savefig(f"fig18-multi-fig-mesh-{num_cores}-{mesh}.pdf")
 
 
 
@@ -367,8 +367,8 @@ def draw_flops():
     ax.set_axisbelow(True)
     ax.grid(which="major", axis="y", linestyle="-", linewidth=0.5, color="lightgrey", zorder=1)
 
-    plt.savefig("multi-fig-flops.png")
-    plt.savefig("multi-fig-flops.pdf")
+    plt.savefig("fig18-multi-fig-flops.png")
+    plt.savefig("fig18-multi-fig-flops.pdf")
 
 def draw_hbm_usage():
 
@@ -470,8 +470,8 @@ def draw_hbm_usage():
     ax.set_axisbelow(True)
     ax.grid(which="major", axis="y", linestyle="-", linewidth=0.5, color="lightgrey", zorder=1)
 
-    plt.savefig("multi-fig-hbm.png")
-    plt.savefig("multi-fig-hbm.pdf")
+    plt.savefig("fig18-multi-fig-hbm.png")
+    plt.savefig("fig18-multi-fig-hbm.pdf")
 
 def draw_interconnect_usage():
 
@@ -583,8 +583,8 @@ def draw_interconnect_usage():
     ax.set_axisbelow(True)
     ax.grid(which="major", axis="y", linestyle="-", linewidth=0.5, color="lightgrey", zorder=1)
 
-    plt.savefig("multi-fig-noc.png")
-    plt.savefig("multi-fig-noc.pdf")
+    plt.savefig("fig18-multi-fig-noc.png")
+    plt.savefig("fig18-multi-fig-noc.pdf")
 
 def get_stats():
     for model in models:
