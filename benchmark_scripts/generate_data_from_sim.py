@@ -55,7 +55,7 @@ def run_experiments(batch_sizes, num_cores, kb, seq_lengths, model, num_layers, 
                                         print("Bad output file: ", output_file)
 
                             cmd = \
-                                f"python3 launch.py {model} {c} {bw_case} --core_mem_kb {kb} --output_dir {output_dir} \
+                                f"python3.10 launch.py {model} {c} {bw_case} --core_mem_kb {kb} --output_dir {output_dir} \
                                 --layers {num_layers} --batch_size {batch_size} --sequence_length {seq_length} \
                                 --use_pickle --launch_baseline --launch_icbm_full --reduce_order_list --output_cold_hot_list \
                                 --split_factor {split_factor} --output_full_timings {timing_file} \
@@ -102,15 +102,15 @@ def run_experiments_training(batch_sizes, num_cores, kb, seq_lengths, model, num
                                             print("Bad output file: ", output_file)
 
                                 cmd = \
-                                    f"python3 launch.py {model} {c} {bw_case} --core_mem_kb {kb} --output_dir {output_dir} \
+                                    f"python3.10 launch.py {model} {c} {bw_case} --core_mem_kb {kb} --output_dir {output_dir} \
                                     --layers {num_layers} --batch_size {batch_size} --sequence_length {seq_length} \
                                     --use_pickle --launch_baseline --launch_icbm_full --reduce_order_list --output_cold_hot_list \
                                     --split_factor {split_factor} --output_full_timings {timing_file} \
                                     --comm {noc_bw} --mesh {mesh} --comp {comp_bw} --training > {output_file}" 
                                 
-                                if comp_bw != comp_bws[-1]:
-                                    if not (m and (noc_bw == noc_bws[-1])):
-                                        cmd += " &"
+                                # if comp_bw != comp_bws[-1]:
+                                #     if not (m and (noc_bw == noc_bws[-1])):
+                                #         cmd += " &"
 
                                 print(cmd, end="... ", flush=True)
                                 os.system(cmd)

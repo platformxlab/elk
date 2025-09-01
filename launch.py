@@ -27,11 +27,11 @@ def gen_pickle(args, output_dir, layer, order_pickle_filename, pickle_filename, 
     print("Generating new pickle...", file=sys.stderr, flush=True)
 
     if TRAINING:
-        cmd = f"cd models && python3 model_parser.py {args.modelname}.json {args.batch_size} {args.sequence_length} {args.num_cores // (args.split_factor+1)}"
+        cmd = f"cd models && python3.10 model_parser.py {args.modelname}.json {args.batch_size} {args.sequence_length} {args.num_cores // (args.split_factor+1)}"
         TE.MAX_MEM_THRESHOLD = 0.999
         TE.CORE_UTIL_THRESHOLD = 0.999
     else:
-        cmd = f"cd models && python3 model_parser.py {args.modelname}.json {args.batch_size} 1 {args.num_cores // args.split_factor} {args.sequence_length}"
+        cmd = f"cd models && python3.10 model_parser.py {args.modelname}.json {args.batch_size} 1 {args.num_cores // args.split_factor} {args.sequence_length}"
     os.system(cmd)
 
     prog = get_model_from_file(f"models/TExpr/TExpr_{args.modelname}-b{args.batch_size}.json", name=f"{args.modelname}-b{args.batch_size}",
